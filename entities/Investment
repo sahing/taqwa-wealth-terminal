@@ -1,0 +1,50 @@
+{
+  "name": "Investment",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "project_title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "units": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Active",
+        "Matured",
+        "Cancelled"
+      ],
+      "default": "Pending"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "maturity_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "current_value": {
+      "type": "number"
+    },
+    "transaction_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "project_id",
+    "amount"
+  ]
+}

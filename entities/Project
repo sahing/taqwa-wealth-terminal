@@ -1,0 +1,83 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Real Estate",
+        "Land",
+        "Gold",
+        "Business",
+        "Redevelopment"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "min_investment": {
+      "type": "number"
+    },
+    "roi_estimate": {
+      "type": "number"
+    },
+    "duration_months": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Open",
+        "Closing Soon",
+        "Sold Out",
+        "Draft"
+      ],
+      "default": "Open"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cover_image": {
+      "type": "string"
+    },
+    "shariah_purity": {
+      "type": "number",
+      "description": "0-100 purity score"
+    },
+    "asset_backing": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Blog",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Halal Finance",
+        "Wealth Planning",
+        "Gold Investing",
+        "Property Investing",
+        "Market Insights"
+      ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "read_time": {
+      "type": "number"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "published": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

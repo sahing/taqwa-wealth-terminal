@@ -1,0 +1,55 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "investment_id": {
+      "type": "string"
+    },
+    "project_title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Booking Token",
+        "Consultation Fee",
+        "Reservation",
+        "Full Investment",
+        "Other"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Success",
+        "Pending",
+        "Failed",
+        "Refunded"
+      ],
+      "default": "Pending"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "receipt_url": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "amount"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "KYC",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "pan_number": {
+      "type": "string"
+    },
+    "aadhaar_number": {
+      "type": "string"
+    },
+    "passport_number": {
+      "type": "string"
+    },
+    "pan_document_url": {
+      "type": "string"
+    },
+    "aadhaar_document_url": {
+      "type": "string"
+    },
+    "passport_document_url": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Not Submitted",
+        "Pending Review",
+        "Approved",
+        "Rejected"
+      ],
+      "default": "Not Submitted"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
